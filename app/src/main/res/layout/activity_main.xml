@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="10dp">
+
+    <EditText
+        android:id="@+id/EnterName"
+        android:layout_width="178dp"
+        android:layout_height="27dp"
+        android:background="#37673AB7"
+        android:hint="Enter player name"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/EnterPosition"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="#37673AB7"
+        android:hint="Enter player position"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/EnterName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/EnterBirth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#37673AB7"
+        android:hint="Enter player birth"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/EnterName"
+        app:layout_constraintStart_toStartOf="@+id/EnterName"
+        app:layout_constraintTop_toBottomOf="@+id/EnterName" />
+
+    <EditText
+        android:id="@+id/EnterDitals"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#37673AB7"
+        android:hint="Enter player ditals"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/EnterPosition"
+        app:layout_constraintStart_toStartOf="@+id/EnterPosition"
+        app:layout_constraintTop_toBottomOf="@+id/EnterPosition" />
+
+    <EditText
+        android:id="@+id/EnterAge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#37673AB7"
+        android:hint="Enter player age"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/EnterBirth"
+        app:layout_constraintStart_toStartOf="@+id/EnterBirth"
+        app:layout_constraintTop_toBottomOf="@+id/EnterBirth" />
+
+    <Button
+        android:id="@+id/SaveBtn"
+        android:layout_width="172dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="10dp"
+        android:text="Save Note"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/EnterDitals"
+        app:layout_constraintStart_toStartOf="@+id/EnterDitals"
+        app:layout_constraintTop_toBottomOf="@+id/EnterDitals" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EnterAge"
+        tools:listitem="@layout/player_list" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
